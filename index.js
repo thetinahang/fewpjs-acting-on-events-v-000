@@ -10,6 +10,12 @@ function moveDodgerLeft() {
   }
 }
 
+document.addEventListener("keydown", function(e) {
+  if (e.key === "ArrowLeft") {
+    moveDodgerLeft();
+  }
+});
+
 function moveDodgerRight() {
   let rightNumbers = dodger.style.right.replace("px", "");
   let right = parseInt(rightNumbers, 10);
@@ -18,3 +24,9 @@ function moveDodgerRight() {
     dodger.style.right = `${right = 1}px`;
   }
 }
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "ArrowRight") {
+    moveDodgerRight();
+  }
+});
